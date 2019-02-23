@@ -9,6 +9,8 @@ class _Operand:
 
 class _Operator:
     def __init__(self, operator):
+        if (operator not in ['+', '-', '*', '/']):
+            raise ValueError('operator must be one of: +, -, *, /')
         self.value = operator
 
 

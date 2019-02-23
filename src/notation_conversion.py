@@ -1,10 +1,10 @@
-from tokenize_expression import Token
+from src.tokenize_expression import Token, stringify_tokens
 
 
-def is_low_precedence(op): op.value == '+' or op.value == '-'
+def is_low_precedence(op): return op.value == '+' or op.value == '-'
 
 
-def is_high_precedence(op): op.value == '*' or op.value == '/'
+def is_high_precedence(op): return op.value == '*' or op.value == '/'
 
 
 def is_lower_precedence(first_op, second_op):
@@ -46,7 +46,7 @@ def infix_to_postfix(infix_tokens):
                             postfix_tokens.append(op_top)
                 token_stack.append(curr_op)
 
-    for token in token_stack:
-        postfix_tokens.append(token)
+    while len(token_stack) > 0:
+        postfix_tokens.append(token_stack.pop())
 
     return postfix_tokens
