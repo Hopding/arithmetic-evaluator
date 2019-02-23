@@ -1,5 +1,7 @@
-from foo import foo, add  # pylint: disable=import-error
+from tokenize_expression import tokenize_expression, stringify_tokens, Token  # pylint: disable=import-error
 
-print('Hello World!')
-print(foo)
-print(add)
+s = '( 1+213 - (325 +2))'
+
+tokens = tokenize_expression(s)
+
+print(stringify_tokens(tokens))
