@@ -44,7 +44,7 @@ def tokenize_expression(expression_string):
     return list(tokens)
 
 
-def stringify_tokens(tokens):
+def stringify_tokens(tokens, delim=''):
     string = ''
 
     for token in tokens:
@@ -56,5 +56,6 @@ def stringify_tokens(tokens):
             string += str(token.value)
         if isinstance(token, Token.Operator):
             string += token.value
+        string += delim
 
     return string
