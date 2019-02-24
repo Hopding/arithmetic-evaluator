@@ -1,5 +1,5 @@
 # pylint: disable=import-error
-from tokenize_expression import Token
+from expression_tokenizer import Token
 
 
 def do_eval(first, second, operator):
@@ -17,10 +17,8 @@ def eval_postfix(postfix_tokens):
     operand_stack = []
 
     for token in postfix_tokens:
-
         if isinstance(token, Token.Operand):
             operand_stack.append(token)
-
         elif isinstance(token, Token.Operator):
             operator = token.value
             second = operand_stack.pop().value

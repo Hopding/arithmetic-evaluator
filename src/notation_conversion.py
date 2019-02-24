@@ -1,5 +1,5 @@
 # pylint: disable=import-error
-from tokenize_expression import Token, stringify_tokens
+from expression_tokenizer import Token, stringify_tokens
 
 
 def is_low_precedence(op): return op.value == '+' or op.value == '-'

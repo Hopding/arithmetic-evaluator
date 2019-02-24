@@ -1,6 +1,6 @@
 import unittest
 
-from tokenize_expression import tokenize_expression, stringify_tokens, Token
+from expression_tokenizer import tokenize_expression, stringify_tokens, Token
 
 
 class TestStringifyTokens(unittest.TestCase):
