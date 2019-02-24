@@ -1,5 +1,6 @@
 import unittest
 
+# pylint: disable=import-error
 from expression_tokenizer import tokenize_expression, stringify_tokens, Token
 
 
