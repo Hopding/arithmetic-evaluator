@@ -1,7 +1,7 @@
 import unittest
 
-from src.tokenize_expression import tokenize_expression, stringify_tokens, Token
-from src.notation_conversion import infix_to_postfix, is_lower_precedence
+from tokenize_expression import tokenize_expression, stringify_tokens, Token
+from notation_conversion import infix_to_postfix, is_lower_precedence
 
 
 def parse_infix_to_postfix(infix_expression):

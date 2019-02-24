@@ -1,6 +1,7 @@
 # pylint: disable=import-error
 from tokenize_expression import tokenize_expression, stringify_tokens, Token
 from notation_conversion import infix_to_postfix
+from postfix_evaluation import eval_postfix
 
 s = '-( 1+213 - (325 +2))'
 
@@ -13,3 +14,7 @@ print(stringify_tokens(infix_tokens))
 print()
 print('Postfix:')
 print(stringify_tokens(postfix_tokens, delim=' '))
+
+print()
+print('Result:')
+print(eval_postfix(postfix_tokens).value)
