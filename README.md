@@ -1,6 +1,6 @@
-# UMSL CS5130 Project 1
+# Arithmetic Evaluator
 
-This program fulfills the requirements for CS5130 Project 1. It implements an arithmetic expression evaluator in Python. When evaluating an expression, the following steps are performed:
+This program implements an arithmetic expression evaluator in Python. When evaluating an expression, the following steps are performed:
 
 1. **Input** - When the program starts, it prompts the user to enter an arithmetic expression as a string. After the program finishes processing one expression, it stops.
 2. **Skip Data Validation** - The validation step would be rather complicated. We want to focus the program on the main technical problem. So we'll require the input string to have the following properties:
